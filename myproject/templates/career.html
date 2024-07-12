@@ -1,0 +1,383 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Master</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="{% static '/styles.css' %}">
+    <script src="https://kit.fontawesome.com/409d0d715c.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+
+    <!-- Include Swiper's JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+</head>
+
+<body>
+
+    <!-- Social Media Icon Bar -->
+    <div class="social-media-bar">
+        <a href="https://in.linkedin.com/company/property-master-official" target="_blank"><img
+                src="{% static 'images/linkedin.svg' %}" alt="linkedin"></a>
+
+        <a href="https://www.facebook.com/PropertyMasterIndore/" target="_blank"><img
+                src="{% static 'images/facebook.svg' %}" alt="facebook"></a>
+
+        <a href="https://www.instagram.com/property_master_indore_/" target="_blank"><img
+                src="{% static 'images/instagram.svg' %}" alt="instagram"></a>
+
+        <a href="https://x.com/propertymaste19?lang=en" target="_blank"><img src="{% static 'images/twitter.svg' %}"
+                alt="Twitter"></a>
+    </div>
+
+    <nav class="py-1 px-5 flex justify-between items-center shadow-md bg-white-800 w-full">
+        <div class="container flex flex-wrap justify-between items-center mx-auto">
+            <a href="{% url 'index' %}" class="flex items-center">
+                <!-- Logo Image Placeholder -->
+                <img src="{% static 'images/logo.webp' %}" class="mr-3 h-8 sm:h-16" alt="Logo">
+            </a>
+
+
+            <!-- Primary Navigation Menu -->
+            <div class="hidden justify-between items-center w-full md:flex md:w-auto md:order-1" id="mobile-menu-2">
+                <div class="relative group mr-8">
+                    <button class="text-black py-2 px-4 rounded inline-flex items-center">
+                        <a href="{% url 'our-team' %}">Our Team</a>
+                        <!-- SVG icon omitted for brevity -->
+                    </button>
+                    <!-- Submenu Dropdown Grid -->
+                </div>
+                <div class="relative group mr-8">
+                    <button class="text-black py-2 px-4 rounded inline-flex items-center">
+                        <span class="mr-1">Legal</span>
+                        <!-- SVG icon omitted for brevity -->
+                        <svg class="fill-current h-4 w-4 transform group-hover:-rotate-180
+                        transition duration-150 ease-in-out" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                            <path
+                                d="M5.95 7.05a.5.5 0 01.7 0L10 10.3l3.35-3.25a.5.5 0 11.7.7l-4 4a.5.5 0 01-.7 0l-4-4a.5.5 0 010-.7z" />
+                        </svg>
+                    </button>
+                    <!-- Submenu Dropdown Grid -->
+                    <div
+                        class="absolute hidden group-hover:grid grid-flow-row-dense grid-cols-2 bg-white shadow-lg rounded w-56">
+                        <a href="{% url 'rera-registration' %}"
+                            class="col-span-2 bg-gray-200 hover:bg-gray-300 py-2 px-4 block whitespace-no-wrap">Rera
+                            Registration- Certificate</a>
+
+                        <a href="{% url 'gst' %}"
+                            class="col-span-2 bg-gray-200 hover:bg-gray-300 py-2 px-4 block whitespace-no-wrap">GST-
+                            Property Master</a>
+
+
+                        <a href="{% url 'incoroporation-c' %}"
+                            class="col-span-2 bg-gray-200 hover:bg-gray-300 py-2 px-4 block whitespace-no-wrap">Incorporation
+                            Certificate</a>
+
+
+                        <a href="{% url 'pan' %}"
+                            class="col-span-2 bg-gray-200 hover:bg-gray-300 py-2 px-4 block whitespace-no-wrap">PAN</a>
+                    </div>
+                </div>
+                <div class="relative group mr-8">
+                    <button class="text-black py-2 px-4 rounded inline-flex items-center">
+                        <span class="mr-1">Gallery</span>
+                        <!-- SVG icon omitted for brevity -->
+                        <svg class="fill-current h-4 w-4 transform group-hover:-rotate-180
+                        transition duration-150 ease-in-out" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                            <path
+                                d="M5.95 7.05a.5.5 0 01.7 0L10 10.3l3.35-3.25a.5.5 0 11.7.7l-4 4a.5.5 0 01-.7 0l-4-4a.5.5 0 010-.7z" />
+                        </svg>
+                    </button>
+                    <!-- Submenu Dropdown Grid -->
+                    <div
+                        class="absolute hidden group-hover:grid grid-flow-row-dense grid-cols-2 bg-white shadow-lg rounded w-56">
+                        <a href="{% url 'project-gallery' %}"
+                            class="col-span-2 bg-gray-200 hover:bg-gray-300 py-2 px-4 block whitespace-no-wrap">Project
+                            Gallery</a>
+
+
+                        <a href="{% url 'team-gallery' %}"
+                            class="col-span-2 bg-gray-200 hover:bg-gray-300 py-2 px-4 block whitespace-no-wrap">Team
+                            gallery</a>
+
+
+                        <a href="{% url 'video' %}"
+                            class="col-span-2 bg-gray-200 hover:bg-gray-300 py-2 px-4 block whitespace-no-wrap">Video</a>
+
+
+                        <a href="{% url 'press&news' %}"
+                            class="col-span-2 bg-gray-200 hover:bg-gray-300 py-2 px-4 block whitespace-no-wrap">Press &
+                            News</a>
+                    </div>
+                </div>
+
+
+
+                <div class="relative group">
+                    <button class="text-black py-2 px-4 rounded inline-flex items-center">
+                        <span class="mr-1">Our Projects</span>
+                        <!-- SVG icon omitted for brevity -->
+                        <svg class="fill-current h-4 w-4 transform group-hover:-rotate-180
+                        transition duration-150 ease-in-out" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                            <path
+                                d="M5.95 7.05a.5.5 0 01.7 0L10 10.3l3.35-3.25a.5.5 0 11.7.7l-4 4a.5.5 0 01-.7 0l-4-4a.5.5 0 010-.7z" />
+                        </svg>
+                    </button>
+                    <!-- Submenu Dropdown Grid -->
+                    <div
+                        class="absolute hidden group-hover:grid grid-flow-row-dense grid-cols-2 bg-white shadow-lg rounded w-56">
+                        <a href="/property-details/8/"
+                            class="col-span-2 bg-gray-200 hover:bg-gray-300 py-2 px-4 block whitespace-no-wrap">Tricone
+                            City</a>
+
+
+                        <a href="/property-details/3/"
+                            class="col-span-2 bg-gray-200 hover:bg-gray-300 py-2 px-4 block whitespace-no-wrap">Emerald
+                            Gardenia</a>
+                    </div>
+                </div>
+
+                <div class="relative group">
+                    <button class="text-black py-2 px-4 rounded inline-flex items-center">
+                        <a class="mr-1" href="{% url 'career' %}">Career</a>
+                        <!-- SVG icon omitted for brevity -->
+                    </button>
+                    <!-- Submenu Dropdown Grid -->
+                </div>
+
+                <ul class="flex flex-col ml-8 mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
+                    <!-- Dropdown Selector Placeholder -->
+                    <li>
+                        <a href="{% url 'post_property' %}" type="button"
+                            class="text-orange-500 bg-transparent border border-orange-500 hover:bg-orange-500 hover:text-white focus:ring-4 focus:ring-orange-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mr-3 md:mr-0">
+                            Post Property <span
+                                class="bg-orange-100 text-orange-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-orange-200 dark:text-orange-900 ml-3">FREE</span></a>
+                    </li>
+                </ul>
+            </div>
+
+
+
+            <div class="flex md:order-2">
+                {% if user.is_authenticated %}
+                <div class="relative">
+                    <button
+                        class="text-blue-700 bg-transparent border border-blue-700 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0">
+                        My Profile
+                    </button>
+                    <div class="absolute hidden text-gray-700 pt-5 group-hover:block bg-white shadow-lg rounded-lg">
+                        <a href="" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Profile</a>
+                        <a href="{% url 'logout' %}"
+                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Logout</a>
+                    </div>
+                </div>
+                {% else %}
+                <div class="relative group">
+                    <a href="{% url 'login' %}"
+                        class="text-white bg-orange-600 hover:bg-orange-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-5 inline-block">
+                        Login
+                    </a>
+
+                    <div
+                        class="absolute hidden group-hover:grid grid-flow-row-dense grid-cols-2 bg-white shadow-lg rounded w-56">
+                        <a href="https://propertymaster.co.in/propertymaster-admin/"
+                            class="col-span-2 bg-gray-200 hover:bg-gray-300 py-2 px-4 block whitespace-no-wrap">Login as
+                            Registered User</a>
+
+
+                        <a href="{% url 'login' %}"
+                            class="col-span-2 bg-gray-200 hover:bg-gray-300 py-2 px-4 block whitespace-no-wrap">Login as
+                            Customer</a>
+                    </div>
+                </div>
+                <a href="{% url 'signup' %}"
+                    class="text-blue-700 bg-transparent border border-blue-700 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 inline-block">
+                    Sign Up
+                </a>
+                {% endif %}
+                <button data-collapse-toggle="mobile-menu-2" type="button"
+                    class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+                    aria-controls="mobile-menu-2" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+
+
+            <!-- Hamburger Icon -->
+            <button data-collapse-toggle="mobile-menu-2" type="button"
+                class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+                aria-controls="mobile-menu-2" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
+                    </path>
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Career Benefits Section -->
+    <section class="py-20 bg-gray-100 mx-4">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-semibold text-center text-gray-800 mb-10">Join Our Team: Become a Business Partner
+            </h2>
+            <p class="text-center text-gray-600 mb-16">
+                At [Your Company Name], we are committed to building not just homes, but also successful partnerships.
+                As a leading real estate company, we understand that our strength lies in our collaborations. That's why
+                we invite you to join us as a business partner, where you can enjoy numerous benefits and opportunities
+                for growth.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-semibold mb-2">Industry Expertise</h3>
+                    <p class="text-gray-600">
+                        With years of experience and a reputation for excellence, our team provides insights and market
+                        intelligence that can significantly enhance your business operations and profitability.
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-semibold mb-2">Innovative Tools and Resources</h3>
+                    <p class="text-gray-600">
+                        As our partner, you gain access to cutting-edge technology and marketing tools that can
+                        streamline
+                        processes, improve client engagement, and increase sales efficiency.
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-semibold mb-2">Growth Opportunities</h3>
+                    <p class="text-gray-600">
+                        Our expansive network offers unparalleled opportunities for growth. We work closely with our
+                        partners to identify new markets and expand their reach, ensuring mutual success.
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-semibold mb-2">Training and Development</h3>
+                    <p class="text-gray-600">
+                        We believe in the continuous growth of our partners. Our comprehensive training programs equip
+                        you
+                        with the latest trends and skills needed to thrive in today’s competitive real estate market.
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-semibold mb-2">Marketing and Branding Support</h3>
+                    <p class="text-gray-600">
+                        Leverage our well-established brand as you build your own. We provide substantial marketing
+                        support
+                        to increase your visibility and help you attract and retain clients.
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-semibold mb-2">Competitive Commission Structure</h3>
+                    <p class="text-gray-600">
+                        Enjoy a transparent and rewarding commission structure that recognizes and compensates your hard
+                        work and dedication.
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-semibold mb-2">Community and Network</h3>
+                    <p class="text-gray-600">
+                        Join a community of like-minded professionals. Our regular partner events and meetings not only
+                        help in professional networking but also in building long-lasting relationships within the
+                        industry.
+                    </p>
+                </div>
+            </div>
+            <div class="text-center mt-16">
+                <h3 class="text-2xl font-semibold mb-2">Who We Are Looking For?</h3>
+                <p class="text-gray-600 mb-10">
+                    We are looking for driven and innovative individuals who are committed to excellence and are eager
+                    to
+                    make a significant impact in the real estate sector. Whether you are an experienced professional or
+                    just starting out, if you have the drive and the vision, we have the tools and the environment to
+                    help
+                    you succeed.
+                </p>
+                <a href="#contactModal"
+                    class="text-white bg-orange-600 hover:bg-orange-800 focus:ring-4 focus:ring-orange-300 font-medium rounded-lg text-lg px-10 py-4 inline-block"
+                    id="openModal">
+                    Get in Touch
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us Modal -->
+    <div id="contactModal"
+        class="fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center z-50 opacity-0 pointer-events-none transition-opacity duration-300">
+        <div class="bg-white rounded-lg p-8 shadow-lg w-11/12 md:w-1/2 lg:w-1/3">
+            <h2 class="text-2xl font-semibold mb-4">Contact Us</h2>
+            <form>
+                <div class="mb-4">
+                    <label for="name" class="block text-gray-700">Name</label>
+                    <input type="text" id="name" class="w-full px-3 py-2 border rounded-lg" required>
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block text-gray-700">Email</label>
+                    <input type="email" id="email" class="w-full px-3 py-2 border rounded-lg" required>
+                </div>
+                <div class="mb-4">
+                    <label for="contact-number" class="block text-gray-700">Contact Number</label>
+                    <input type="tel" id="contact-number" class="w-full px-3 py-2 border rounded-lg" required>
+                </div>
+                <div class="mb-4">
+                    <label for="profession" class="block text-gray-700">Profession</label>
+                    <input type="text" id="profession" class="w-full px-3 py-2 border rounded-lg" required>
+                </div>
+                <div class="mb-4">
+                    <label for="message" class="block text-gray-700">Message</label>
+                    <textarea id="message" class="w-full px-3 py-2 border rounded-lg" rows="4" required></textarea>
+                </div>
+                <div class="flex justify-end">
+                    <button type="button" id="closeModal"
+                        class="bg-gray-500 text-white px-4 py-2 rounded-lg mr-2">Cancel</button>
+                    <button type="submit"
+                        class="bg-orange-600 hover:bg-orange-800 text-white px-4 py-2 rounded-lg">Send</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <style>
+        /* Add this to your existing CSS file */
+        #contactModal.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+    </style>
+
+    <!-- Add this script just before the closing </body> tag -->
+    <script>
+        document.getElementById('openModal').addEventListener('click', function () {
+            document.getElementById('contactModal').classList.add('active');
+        });
+
+        document.getElementById('closeModal').addEventListener('click', function () {
+            document.getElementById('contactModal').classList.remove('active');
+        });
+
+        window.addEventListener('click', function (event) {
+            const modal = document.getElementById('contactModal');
+            if (event.target == modal) {
+                modal.classList.remove('active');
+            }
+        });
+    </script>
+
+
+
+
+</body>
+
+</html>

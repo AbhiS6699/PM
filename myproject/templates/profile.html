@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div class="min-h-screen flex items-center justify-center bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-md w-full bg-white p-8 rounded-lg shadow-lg">
+            <h2 class="text-center text-3xl font-extrabold text-gray-900 mb-4">Your Profile</h2>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="name">
+                    Full Name
+                </label>
+                <p id="name" class="py-2 px-3 bg-gray-200 rounded-md">{{ user.get_full_name }}</p>
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
+                    Email Address
+                </label>
+                <p id="email" class="py-2 px-3 bg-gray-200 rounded-md">{{ user.email }}</p>
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="mobile">
+                    Mobile Number
+                </label>
+                <p id="mobile" class="py-2 px-3 bg-gray-200 rounded-md">{{ user.username }}</p>
+            </div>
+            <div class="text-center">
+                <a href="{% url 'index' %}" class="text-orange-500 hover:text-orange-700">Back to Home</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

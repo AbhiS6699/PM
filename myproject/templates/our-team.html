@@ -1,0 +1,491 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Master</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="{% static '/styles.css' %}">
+    <script src="https://kit.fontawesome.com/409d0d715c.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+
+    <!-- Include Swiper's JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+</head>
+
+<body>
+
+    <!-- Social Media Icon Bar -->
+    <div class="social-media-bar">
+        <a href="https://in.linkedin.com/company/property-master-official" target="_blank"><img
+                src="{% static 'images/linkedin.svg' %}" alt="linkedin"></a>
+
+        <a href="https://www.facebook.com/PropertyMasterIndore/" target="_blank"><img
+                src="{% static 'images/facebook.svg' %}" alt="facebook"></a>
+
+        <a href="https://www.instagram.com/property_master_indore_/" target="_blank"><img
+                src="{% static 'images/instagram.svg' %}" alt="instagram"></a>
+
+        <a href="https://x.com/propertymaste19?lang=en" target="_blank"><img src="{% static 'images/twitter.svg' %}"
+                alt="Twitter"></a>
+    </div>
+
+    <nav class="py-1 px-5 flex justify-between items-center shadow-md bg-white-800 w-full">
+        <div class="container flex flex-wrap justify-between items-center mx-auto">
+            <a href="{% url 'index' %}" class="flex items-center">
+                <!-- Logo Image Placeholder -->
+                <img src="{% static 'images/logo.webp' %}" class="mr-3 h-8 sm:h-16" alt="Logo">
+            </a>
+
+            <!-- Primary Navigation Menu -->
+            <div class="hidden justify-between items-center w-full md:flex md:w-auto md:order-1" id="mobile-menu-2">
+                <div class="relative group mr-8">
+                    <button class="text-black py-2 px-4 rounded inline-flex items-center">
+                        <a href="{% url 'our-team' %}">Our Team</a>
+                        <!-- SVG icon omitted for brevity -->
+                    </button>
+                    <!-- Submenu Dropdown Grid -->
+                </div>
+                <div class="relative group mr-8">
+                    <button class="text-black py-2 px-4 rounded inline-flex items-center">
+                        <span class="mr-1">Legal</span>
+                        <!-- SVG icon omitted for brevity -->
+                        <svg class="fill-current h-4 w-4 transform group-hover:-rotate-180
+                        transition duration-150 ease-in-out" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                            <path
+                                d="M5.95 7.05a.5.5 0 01.7 0L10 10.3l3.35-3.25a.5.5 0 11.7.7l-4 4a.5.5 0 01-.7 0l-4-4a.5.5 0 010-.7z" />
+                        </svg>
+                    </button>
+                    <!-- Submenu Dropdown Grid -->
+                    <div
+                        class="absolute hidden group-hover:grid grid-flow-row-dense grid-cols-2 bg-white shadow-lg rounded w-56">
+                        <a href="{% url 'rera-registration' %}"
+                            class="col-span-2 bg-gray-200 hover:bg-gray-300 py-2 px-4 block whitespace-no-wrap">Rera
+                            Registration- Certificate</a>
+
+                        <a href="{% url 'gst' %}"
+                            class="col-span-2 bg-gray-200 hover:bg-gray-300 py-2 px-4 block whitespace-no-wrap">GST-
+                            Property Master</a>
+
+
+                        <a href="{% url 'incoroporation-c' %}"
+                            class="col-span-2 bg-gray-200 hover:bg-gray-300 py-2 px-4 block whitespace-no-wrap">Incorporation
+                            Certificate</a>
+
+
+                        <a href="{% url 'pan' %}"
+                            class="col-span-2 bg-gray-200 hover:bg-gray-300 py-2 px-4 block whitespace-no-wrap">PAN</a>
+                    </div>
+                </div>
+                <div class="relative group mr-8">
+                    <button class="text-black py-2 px-4 rounded inline-flex items-center">
+                        <span class="mr-1">Gallery</span>
+                        <!-- SVG icon omitted for brevity -->
+                        <svg class="fill-current h-4 w-4 transform group-hover:-rotate-180
+                        transition duration-150 ease-in-out" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                            <path
+                                d="M5.95 7.05a.5.5 0 01.7 0L10 10.3l3.35-3.25a.5.5 0 11.7.7l-4 4a.5.5 0 01-.7 0l-4-4a.5.5 0 010-.7z" />
+                        </svg>
+                    </button>
+                    <!-- Submenu Dropdown Grid -->
+                    <div
+                        class="absolute hidden group-hover:grid grid-flow-row-dense grid-cols-2 bg-white shadow-lg rounded w-56">
+                        <a href="{% url 'project-gallery' %}"
+                            class="col-span-2 bg-gray-200 hover:bg-gray-300 py-2 px-4 block whitespace-no-wrap">Project
+                            Gallery</a>
+
+
+                        <a href="{% url 'team-gallery' %}"
+                            class="col-span-2 bg-gray-200 hover:bg-gray-300 py-2 px-4 block whitespace-no-wrap">Team
+                            gallery</a>
+
+
+                        <a href="{% url 'video' %}"
+                            class="col-span-2 bg-gray-200 hover:bg-gray-300 py-2 px-4 block whitespace-no-wrap">Video</a>
+
+
+                        <a href="{% url 'press&news' %}"
+                            class="col-span-2 bg-gray-200 hover:bg-gray-300 py-2 px-4 block whitespace-no-wrap">Press &
+                            News</a>
+                    </div>
+                </div>
+
+                <style>
+                    i {
+                        transition: transform 0.5s ease;
+                    }
+
+                    .ulis .lis .nested {
+                        text-decoration: none;
+                        list-style-type: none;
+                        color: red;
+                    }
+
+                    .home,
+                    .html,
+                    .angular,
+                    .js,
+                    .about-us,
+                    .contact {
+                        padding: 1rem 0;
+                    }
+
+                    .navbar-links,
+                    .navbar-search {
+                        display: flex;
+                        gap: 2rem;
+                    }
+
+                    .html,
+                    .js,
+                    .html-js-link {
+                        position: relative;
+                    }
+
+                    .html:hover .html-chevron,
+                    .js:hover .js-chevron {
+                        transform: rotate(-180deg);
+                    }
+
+                    .html-js-link:hover i {
+                        transform: rotate(-90deg);
+                    }
+
+                    .html-sub-menu,
+                    .js-sub-menu,
+                    .html-js-sub-menu {
+                        display: none;
+                        flex-direction: column;
+                        position: absolute;
+                        top: 3.45rem;
+                        left: -5%;
+                        background-color: white;
+                        width: 110%;
+                    }
+
+                    .html-sub-menu li,
+                    .js-sub-menu li,
+                    .html-js-sub-menu li {
+                        padding: 0.75rem;
+                    }
+
+                    .html:hover .html-sub-menu,
+                    .js:hover .js-sub-menu {
+                        display: flex;
+                    }
+
+                    .html-sub-menu:hover .html-sub-menu {
+                        display: flex;
+                    }
+
+                    .html-js-sub-menu {
+                        top: 5rem;
+                        left: 9rem;
+                    }
+
+                    .html-sub-menu li:nth-child(3):hover .html-js-sub-menu {
+                        display: flex;
+                    }
+
+                    .html-sub-menu:hover i {
+                        transform: rotate(-90deg);
+                    }
+                </style>
+
+                <li class="html" class="lis">
+                    <a href="#" class="html-link nested">
+                        Our Project
+                        <i class="fa-solid  
+                                  fa-chevron-down html-chevron">
+                        </i>
+                    </a>
+                    <ul class="html-sub-menu" class="ulis">
+                        <li class="lis">
+                            <a href="#" class="html-js-link nested">
+                                Residential
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                            <ul class="html-js-sub-menu" class="ulis">
+                                <li class="lis"><a href="#">Angular</a></li>
+                                <li class="lis"><a href="#">Nextjs</a></li>
+                                <li class="lis"><a href="#">jQuery</a></li>
+                                <li class="lis"><a href="#">Express.js</a></li>
+                            </ul>
+                        </li>
+                        <li class="lis">
+                            <a href="#" class="html-js-link nested">
+                                Commercial
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                            <ul class="html-js-sub-menu" class="ulis">
+                                <li class="lis"><a href="#">Angular</a></li>
+                                <li class="lis"><a href="#">Nextjs</a></li>
+                                <li class="lis"><a href="#">jQuery</a></li>
+                                <li class="lis"><a href="#">Express.js</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+
+
+
+
+
+                <div class="relative group">
+                    <button class="text-black py-2 px-4 rounded inline-flex items-center">
+                        <a class="mr-1" href="{% url 'career' %}">Career</a>
+                        <!-- SVG icon omitted for brevity -->
+                    </button>
+                    <!-- Submenu Dropdown Grid -->
+                </div>
+
+                <ul class="flex flex-col ml-8 mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
+                    <!-- Dropdown Selector Placeholder -->
+                    <li>
+                        <a href="{% url 'post_property' %}" type="button"
+                            class="text-orange-500 bg-transparent border border-orange-500 hover:bg-orange-500 hover:text-white focus:ring-4 focus:ring-orange-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mr-3 md:mr-0">
+                            Post Property <span
+                                class="bg-orange-100 text-orange-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-orange-200 dark:text-orange-900 ml-3">FREE</span></a>
+                    </li>
+                </ul>
+            </div>
+
+
+
+            <div class="flex md:order-2">
+                {% if user.is_authenticated %}
+                <div class="relative">
+                    <button
+                        class="text-blue-700 bg-transparent border border-blue-700 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0">
+                        My Profile
+                    </button>
+                    <div class="absolute hidden text-gray-700 pt-5 group-hover:block bg-white shadow-lg rounded-lg">
+                        <a href="" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Profile</a>
+                        <a href="{% url 'logout' %}"
+                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Logout</a>
+                    </div>
+                </div>
+                {% else %}
+                <div class="relative group">
+                    <a href="{% url 'login' %}"
+                        class="text-white bg-orange-600 hover:bg-orange-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-5 inline-block">
+                        Login
+                    </a>
+
+                    <div
+                        class="absolute hidden group-hover:grid grid-flow-row-dense grid-cols-2 bg-white shadow-lg rounded w-56">
+                        <a href="https://propertymaster.co.in/propertymaster-admin/"
+                            class="col-span-2 bg-gray-200 hover:bg-gray-300 py-2 px-4 block whitespace-no-wrap">Login as
+                            Registered User</a>
+
+
+                        <a href="{% url 'login' %}"
+                            class="col-span-2 bg-gray-200 hover:bg-gray-300 py-2 px-4 block whitespace-no-wrap">Login as
+                            Customer</a>
+                    </div>
+                </div>
+                <a href="{% url 'signup' %}"
+                    class="text-blue-700 bg-transparent border border-blue-700 hover:bg-blue-700 hover:text-white focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 inline-block">
+                    Sign Up
+                </a>
+                {% endif %}
+                <button data-collapse-toggle="mobile-menu-2" type="button"
+                    class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+                    aria-controls="mobile-menu-2" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <header class="bg-beige-200 mt-8 text-orange-600 py-4">
+        <h1 class="text-center font-bold text-3xl">Our Team</h1>
+    </header>
+
+    <section class="container mx-4 my-10 px-5">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <!-- Team Member 1 -->
+            <div class="team-member bg-white rounded-lg shadow-lg p-4 hover:shadow-xl transition-shadow duration-300">
+                <img src="{% static 'images/jitendra.webp' %}" alt="Jitendra Singh"
+                    class="rounded-full w-32 mx-auto mb-4">
+                <h2 class="text-xl font-bold text-center">Jitendra Singh</h2>
+                <p class="text-sm text-gray-600 text-center">MD & CEO</p>
+                <p class="text-center mt-2">Mr. Jitendra Singh, MD and founder of Property Master, is recognized for his
+                    foresight in tapping potential in Tier II & III cities, transforming the real estate landscape under
+                    his leadership.</p>
+                <div class="flex justify-center mt-4">
+                    <a href="https://twitter.com/jitendra" class="mx-2" target="_blank"><i
+                            class="fab fa-twitter"></i></a>
+                    <a href="https://www.facebook.com/jitendrasingh.gaharwar" class="mx-2" target="_blank"><i
+                            class="fab fa-facebook"></i></a>
+                    <a href="https://www.linkedin.com/in/singh-aaditya/" class="mx-2" target="_blank"><i
+                            class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+
+            <!-- Team Member 2 -->
+            <div class="team-member bg-white rounded-lg shadow-lg p-4 hover:shadow-xl transition-shadow duration-300">
+                <img src="{% static 'images/abhimanyu.webp' %}" alt="Abhimanyu Singh"
+                    class="rounded-full w-32 mx-auto mb-4">
+                <h2 class="text-xl font-bold text-center">Abhimanyu Singh</h2>
+                <p class="text-sm text-gray-600 text-center">Executive Director</p>
+                <p class="text-center mt-2">Abhimanyu manages IT and processes at Property Master, plays a key role as
+                    the company lawyer, and is pivotal in formulating internal policies.</p>
+                <div class="flex justify-center mt-4">
+                    <a href="https://twitter.com/jitendra" class="mx-2" target="_blank"><i
+                            class="fab fa-twitter"></i></a>
+                    <a href="https://www.facebook.com/abhimanyusingh.abhibaghel" class="mx-2" target="_blank"><i
+                            class="fab fa-facebook"></i></a>
+                    <a href="https://www.linkedin.com/in/abhimanyu-singh-79a0481b6/" class="mx-2" target="_blank"><i
+                            class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+
+            <!-- Team Member 3 -->
+            <div class="team-member bg-white rounded-lg shadow-lg p-4 hover:shadow-xl transition-shadow duration-300">
+                <img src="{% static 'images/devendra.jpg' %}" alt="Vivek Singh" class="rounded-full w-32 mx-auto mb-4">
+                <h2 class="text-xl font-bold text-center">Devendra Garhewal</h2>
+                <p class="text-sm text-gray-600 text-center">General Manager</p>
+                <p class="text-center mt-2">With 7 years in real estate, Mr. Devendra Garhewal has leveraged his
+                    expertise to
+                    spearhead structural changes and strategic growth at Property Master.</p>
+                <div class="flex justify-center mt-4">
+                    <a href="https://twitter.com/jitendra" class="mx-2" target="_blank"><i
+                            class="fab fa-twitter"></i></a>
+                    <a href="https://www.facebook.com/dkgarhewal/" class="mx-2" target="_blank"><i
+                            class="fab fa-facebook"></i></a>
+                    <a href="https://www.linkedin.com/in/singh-aaditya/" class="mx-2" target="_blank"><i
+                            class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+
+            <!-- Team Member 4 -->
+            <div class="team-member bg-white rounded-lg shadow-lg p-4 hover:shadow-xl transition-shadow duration-300">
+                <img src="{% static 'images/aditya.jpg' %}" alt="Vivek Singh" class="rounded-full w-32 mx-auto mb-4">
+                <h2 class="text-xl font-bold text-center">Aditya Singh</h2>
+                <p class="text-sm text-gray-600 text-center">IT & Social Media Head</p>
+                <p class="text-center mt-2">A dynamic and innovative IT & Social Media Head with a proven track record
+                    of leveraging technology and digital platforms to drive business growth in the property management
+                    industry.</p>
+                <div class="flex justify-center mt-4">
+                    <a href="https://twitter.com/jitendra" class="mx-2" target="_blank"><i
+                            class="fab fa-twitter"></i></a>
+                    <a href="https://www.facebook.com/adityabaghel155361060/" class="mx-2" target="_blank"><i
+                            class="fab fa-facebook"></i></a>
+                    <a href="https://www.linkedin.com/in/singh-aaditya/" class="mx-2" target="_blank"><i
+                            class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+
+            <!-- Team Member 4 -->
+            <div class="team-member bg-white rounded-lg shadow-lg p-4 hover:shadow-xl transition-shadow duration-300">
+                <img src="{% static 'images/yogita.jpg' %}" alt="Vivek Singh" class="rounded-full w-32 mx-auto mb-4">
+                <h2 class="text-xl font-bold text-center">Yogita Modi</h2>
+                <p class="text-sm text-gray-600 text-center">counselor</p>
+                <p class="text-center mt-2">Experienced Property Counselor with two years in real estate, specializing
+                    in investment guidance, market analysis, and strategic negotiation.</p>
+                <div class="flex justify-center mt-4">
+                    <a href="https://twitter.com/jitendra" class="mx-2" target="_blank"><i
+                            class="fab fa-twitter"></i></a>
+                    <a href="www.facebook.com" class="mx-2" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.linkedin.com/in/yogita-modi-828366267/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                        class="mx-2" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="xl:grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8">
+                <!-- Contact Info -->
+                <div class="mb-6 md:mb-0">
+                    <h3 class="font-bold mb-2">Contact Us</h3>
+                    <p>222 Singapoore Gold City 1Bypass Road oppo Vistara Township, near Infocity<br>Indore, Madhya
+                        Pradehs, 452016</p>
+                    <p class="my-2">Email: contact@propertymaster.co.in</p>
+                    <p>Phone: +91 8819888835</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="mb-6 md:mb-0">
+                    <h3 class="font-bold mb-2">Quick Links</h3>
+                    <ul>
+                        <li><a href="{% url 'about-us' %}" class="hover:text-orange-500">About Us</a></li>
+                        <li><a href="" class="hover:text-orange-500">Services</a></li>
+                        <li><a href="" class="hover:text-orange-500">FAQ</a></li>
+                        <li><a href="" class="hover:text-orange-500">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Social Media -->
+                <div class="mb-6 md:mb-0">
+                    <h3 class="font-bold mb-2">Follow Us</h3>
+                    <div class="flex mt-4">
+                        <a href="https://www.facebook.com/PropertyMasterIndore/" class="mr-2"><img
+                                src="{% static 'images/facebook.svg' %}" alt="Facebook"
+                                class="w-5 h-5 hover:opacity-80"></a>
+                        <a href="#" class="mr-2"><img src="{% static 'images/twitter.svg' %}" alt="Twitter"
+                                class="w-5 h-5 hover:opacity-80"></a>
+                        <a href="#" class="mr-2"><img src="{% static 'images/instagram.svg' %}" alt="Instagram"
+                                class="w-5 h-5 hover:opacity-80"></a>
+                        <a href="https://www.linkedin.com/company/property-master-official/" class="mr-2"><img
+                                src="{% static 'images/linkedin.svg' %}" alt="LinkedIn"
+                                class="w-5 h-5 hover:opacity-80"></a>
+                    </div>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="mb-6 md:mb-0">
+                    <h3 class="font-bold mb-2">Newsletter</h3>
+                    <p>Sign up to receive updates and offers:</p>
+                    <form action="#" method="POST">
+                        <div class="mt-4 flex">
+                            <input type="email" class="rounded-l px-4 py-2 w-full" placeholder="Enter your email">
+                            <button
+                                class="bg-orange-500 hover:bg-orange-700 text-white px-4 rounded-r">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- Copyright -->
+            <div class="text-center text-gray-500 mt-8">
+                <p>&copy; 2024 Property Master. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+    <!-- ... rest of the HTML ... -->
+
+    <!-- SwiperJS Script for Partners Carousel -->
+
+    <!-- ... existing HTML ... -->
+
+    <!-- WhatsApp Button -->
+    <div class="fixed bottom-4 right-4 z-20">
+        <a href="https://wa.me/+919644888815" target="_blank" class="block">
+            <img src="{% static 'images/whatsapp.png' %}" alt="WhatsApp" class="w-12 h-12">
+        </a>
+    </div>
+
+</body>
+
+</html>

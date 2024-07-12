@@ -1,0 +1,97 @@
+.social-media-bar {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: 1000;
+}
+
+.social-media-bar a {
+    display: block;
+    margin: 10px 0; /* Adjust the space between icons as needed */
+}
+
+.social-media-bar img {
+    display: block;
+    width: 30px; /* Adjust the size of the icons as needed */
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.social-media-bar a:hover img {
+    transform: scale(1.1);
+}
+
+highlighted-button::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border: 8px solid transparent;
+    border-top-color: #2d3748; /* Should match the background of the highlighted button */
+    border-bottom: 0;
+    margin-left: -8px;
+    margin-top: -8px;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  flex: 0 0 auto;
+  width: 300px;
+  scroll-snap-align: start;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.property-details {
+  padding: 15px;
+}
+
+.view-detail-btn {
+  background-color: blue;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.view-detail-btn:hover {
+  background-color: darkblue;
+}
+
+.swiper-button-next::after, .swiper-button-prev::after {
+    color: #ffffff; /* White color for the arrows */
+    font-size: 1.5rem; /* Larger arrow icons */
+}
+
+/* This would typically go in a <style> tag or an external stylesheet */
+#budgetDropdown {
+  /* Style as needed for your design */
+  position: absolute;
+  width: 100%; /* or fixed width */
+  top: 100%; /* Adjust as needed */
+  left: 0;
+  z-index: 1000; /* Ensure it stacks above other content */
+}

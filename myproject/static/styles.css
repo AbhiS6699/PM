@@ -1,0 +1,342 @@
+.social-media-bar {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: 1000;
+}
+
+.social-media-bar a {
+  display: block;
+  margin: 10px 0;
+  /* Adjust the space between icons as needed */
+}
+
+.social-media-bar img {
+  display: block;
+  width: 30px;
+  /* Adjust the size of the icons as needed */
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.social-media-bar a:hover img {
+  transform: scale(1.1);
+}
+
+highlighted-button::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border: 8px solid transparent;
+  border-top-color: #2d3748;
+  /* Should match the background of the highlighted button */
+  border-bottom: 0;
+  margin-left: -8px;
+  margin-top: -8px;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.mySwiper {
+  width: 100%;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+
+.property-card {
+  width: 100%;
+  max-width: 300px;
+  /* Adjust width of the card */
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  color: #F05941;
+  /* White color for the arrows */
+  font-size: 1.5rem;
+  /* Larger arrow icons */
+}
+
+/* Responsive breakpoints for Swiper */
+@media (min-width: 768px) {
+  .swiper-slide {
+    width: auto;
+  }
+}
+
+/* Adjust the maximum width to fit 4 cards in the view */
+.property-cards {
+  max-width: 20%;
+  /* Adjust based on the actual width of your container */
+}
+
+/* Adjustments for Swiper to display 4 cards at once */
+.mySwiper .swiper-slide {
+  width: 25%;
+}
+
+
+
+/* This would typically go in a <style> tag or an external stylesheet */
+#budgetDropdown {
+  /* Style as needed for your design */
+  position: absolute;
+  width: 100%;
+  /* or fixed width */
+  top: 100%;
+  /* Adjust as needed */
+  left: 0;
+  z-index: 1000;
+  /* Ensure it stacks above other content */
+}
+
+toggle-button {
+  padding: 0.5rem 1rem;
+  border: 1px solid transparent;
+  border-radius: 9999px;
+  font: medium;
+  cursor: pointer;
+  background-color: #f3f4f6;
+  /* gray-100 */
+  color: #1f2937;
+  /* gray-800 */
+}
+
+.toggle-button.active {
+  background-color: #ef4444;
+  /* red-500 */
+  color: white;
+}
+
+.relative:hover .absolute {
+  display: block;
+}
+
+/* Styling for modern dropdowns and increased gap between dropdowns and the selector */
+.dropdown-menu {
+  background-color: #ffffff;
+  /* Light background for the dropdown */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow for depth */
+  border: none;
+  /* Remove default borders */
+}
+
+.dropdown-toggle:hover+.dropdown-menu,
+.dropdown-menu:hover {
+  display: block;
+  /* Ensure menu stays open on hover */
+}
+
+.dropdown-menu li a {
+  padding: 8px 12px;
+  /* Increase padding for better spacing */
+  display: block;
+  clear: both;
+  font-weight: normal;
+  /* More modern font-weight */
+  color: #333333;
+  /* Darker font color for better readability */
+  white-space: nowrap;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #f8f9fa;
+  /* Light grey background on hover for submenu items */
+  color: #0056b3;
+  /* Change color on hover for visual feedback */
+}
+
+.dropdown-menu li:last-child a {
+  border-radius: 0 0 8px 8px;
+  /* Rounded corners for the last item */
+}
+
+.md:flex-row:not(:last-child) {
+  margin-right: 24px;
+  /* Add margin to the right of each dropdown for better spacing */
+}
+
+/* Additional selector adjustments for modern look and increased gap */
+.md:flex-row {
+  gap: 30px;
+  /* Increase gap between items */
+}
+
+.form-select {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* Add subtle shadow to the selector */
+  transition: all 0.3s ease;
+  /* Smooth transition for interactions */
+}
+
+.form-select:hover {
+  border-color: #0056b3;
+  /* Change border color on hover */
+}
+
+.team-header {
+  background-color: #2c3e50;
+  /* Darker shade for better contrast */
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.team-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.team-member {
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: calc(33% - 40px);
+  min-width: 300px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.team-member:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #2c3e50;
+  /* Matching the header */
+  color: white;
+}
+
+@media (max-width: 900px) {
+  .team-member {
+    width: calc(50% - 40px);
+    /* Better use of space on tablets */
+  }
+}
+
+@media (max-width: 600px) {
+  .team-member {
+    width: calc(100% - 40px);
+    /* Full width on mobile devices */
+  }
+}
+
+/* Additional styles for testimonials */
+.bg-white {
+  background-color: #ffffff;
+  /* White background for the testimonial section */
+}
+
+.bg-gray-100 {
+  background-color: #f7fafc;
+  /* Light gray background for each testimonial */
+}
+
+.rounded-xl {
+  border-radius: 1rem;
+  /* Rounded corners for the testimonial cards */
+}
+
+.text-gray-600 {
+  color: #4a5568;
+  /* Dark gray text color */
+}
+
+.text-gray-500 {
+  color: #6b7280;
+  /* Medium gray for less emphasis text */
+}
+
+.italic {
+  font-style: italic;
+  /* Italic style for testimonials */
+}
+
+.font-semibold {
+  font-weight: 600;
+  /* Semi-bold font for the customer's name */
+}
+
+.text-database p {
+  margin-top: 1em;
+  /* Space above each paragraph */
+  margin-bottom: 1em;
+  /* Adds space between paragraphs */
+}
+
+/* Tailwind CSS is already included as per the initial template */
+
+
+/* Ensure the parent div is positioned relatively */
+.group {
+  position: relative;
+}
+
+/* Submenu specific styles */
+.group-hover:grid {
+  display: grid !important;
+  /* This will force the menu to appear */
+}
+
+/* Style for the dropdown */
+.group .group-hover:grid {
+  position: absolute;
+  /* Position it absolutely within the relative parent */
+  top: 100%;
+  /* Position it right below the parent item */
+  left: 0;
+  z-index: 1000;
+  /* Higher index to ensure it's on top */
+  width: auto;
+  /* Adjust width as needed */
+  background-color: #fff;
+  /* Background color */
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  /* Optional: adds some shadow */
+  border-radius: 5px;
+  /* Optional: rounds corners */
+}
+
+/* Ensures the navbar is fixed at the top of the viewport */
+/* Ensures the navbar is fixed at the top of the viewport */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff; /* Ensure this is set to your desired navbar color */
+  z-index: 1000; /* Higher than any other content on the page */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: Adds shadow for better visibility */
+}
+
+/* Ensure all transitions or changes maintain the background */
+nav.scrolled {
+  background-color: #ffffff; /* This class might be added dynamically via JS */
+}
+
+/* Adjust padding-top on the body to push all content below the navbar */
+body {
+  padding-top: 60px; /* Adjust this value based on the actual height of your navbar */
+  margin: 0; /* Removes default margin */
+  background: #fff; /* Optional: Ensures any gaps are not visually jarring */
+}
+
