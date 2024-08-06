@@ -117,123 +117,89 @@
                 </div>
 
                 <style>
-                    i {
-                        transition: transform 0.5s ease;
+                    /* Transition for chevron icons */
+                    svg {
+                        transition: transform 0.3s ease;
                     }
 
-                    .ulis .lis .nested {
-                        text-decoration: none;
-                        list-style-type: none;
-                        color: red;
-                    }
-
-                    .home,
-                    .html,
-                    .angular,
-                    .js,
-                    .about-us,
-                    .contact {
-                        padding: 1rem 0;
-                    }
-
-                    .navbar-links,
-                    .navbar-search {
-                        display: flex;
-                        gap: 2rem;
-                    }
-
-                    .html,
-                    .js,
-                    .html-js-link {
-                        position: relative;
-                    }
-
-                    .html:hover .html-chevron,
-                    .js:hover .js-chevron {
-                        transform: rotate(-180deg);
-                    }
-
-                    .html-js-link:hover i {
-                        transform: rotate(-90deg);
-                    }
-
-                    .html-sub-menu,
-                    .js-sub-menu,
-                    .html-js-sub-menu {
+                    /* Hide all submenus initially */
+                    ul.absolute {
                         display: none;
-                        flex-direction: column;
-                        position: absolute;
-                        top: 3.45rem;
-                        left: -5%;
-                        background-color: white;
-                        width: 110%;
                     }
 
-                    .html-sub-menu li,
-                    .js-sub-menu li,
-                    .html-js-sub-menu li {
-                        padding: 0.75rem;
+                    /* Show submenus on hover */
+                    .relative:hover>ul {
+                        display: block;
                     }
 
-                    .html:hover .html-sub-menu,
-                    .js:hover .js-sub-menu {
-                        display: flex;
+                    /* Ensure nested submenus are hidden initially */
+                    .relative ul ul {
+                        display: none;
                     }
 
-                    .html-sub-menu:hover .html-sub-menu {
-                        display: flex;
+                    /* Show nested submenu on hover */
+                    .relative:hover ul ul:hover {
+                        display: block;
                     }
 
-                    .html-js-sub-menu {
-                        top: 5rem;
-                        left: 9rem;
-                    }
-
-                    .html-sub-menu li:nth-child(3):hover .html-js-sub-menu {
-                        display: flex;
-                    }
-
-                    .html-sub-menu:hover i {
-                        transform: rotate(-90deg);
+                    /* Show nested submenu only on hover of parent item */
+                    .relative:hover>ul>.relative:hover>ul {
+                        display: block;
                     }
                 </style>
 
-                <li class="html" class="lis">
-                    <a href="#" class="html-link nested">
-                        Our Project
-                        <i class="fa-solid  
-                                  fa-chevron-down html-chevron">
-                        </i>
-                    </a>
-                    <ul class="html-sub-menu" class="ulis">
-                        <li class="lis">
-                            <a href="#" class="html-js-link nested">
+                <li class="relative mr-8">
+                    <button id="our-projects-button" class="text-black py-2 px-4 rounded inline-flex items-center">
+                        <span class="mr-1">Our Project</span>
+                        <svg class="fill-current h-4 w-4 transform transition duration-150 ease-in-out"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                            <path
+                                d="M5.95 7.05a.5.5 0 01.7 0L10 10.3l3.35-3.25a.5.5 0 11.7.7l-4 4a.5.5 0 01-.7 0l-4-4a.5.5 0 010-.7z" />
+                        </svg>
+                    </button>
+                    <ul id="our-projects-menu" class="absolute hidden bg-white shadow-lg rounded w-56">
+                        <li class="relative">
+                            <button
+                                class="w-full text-left bg-gray-200 hover:bg-gray-300 py-2 px-4 block whitespace-no-wrap inline-flex items-center nested-button">
                                 Residential
-                                <i class="fa-solid fa-chevron-down"></i>
-                            </a>
-                            <ul class="html-js-sub-menu" class="ulis">
-                                <li class="lis"><a href="#">Angular</a></li>
-                                <li class="lis"><a href="#">Nextjs</a></li>
-                                <li class="lis"><a href="#">jQuery</a></li>
-                                <li class="lis"><a href="#">Express.js</a></li>
+                                <svg class="fill-current h-4 w-4 transform transition duration-150 ease-in-out ml-auto"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                    <path
+                                        d="M5.95 7.05a.5.5 0 01.7 0L10 10.3l3.35-3.25a.5.5 0 11.7.7l-4 4a.5.5 0 01-.7 0l-4-4a.5.5 0 010-.7z" />
+                                </svg>
+                            </button>
+                            <ul
+                                class="absolute hidden left-full top-0 ml-1 bg-white shadow-lg rounded w-56 nested-menu">
+                                <li><a href="#"
+                                        class="bg-gray-200 hover:bg-gray-300 py-2 px-4 block whitespace-no-wrap">Project
+                                        1</a></li>
+                                <li><a href="#"
+                                        class="bg-gray-200 hover:bg-gray-300 py-2 px-4 block whitespace-no-wrap">Project
+                                        2</a></li>
                             </ul>
                         </li>
-                        <li class="lis">
-                            <a href="#" class="html-js-link nested">
+                        <li class="relative">
+                            <button
+                                class="w-full text-left bg-gray-200 hover:bg-gray-300 py-2 px-4 block whitespace-no-wrap inline-flex items-center nested-button">
                                 Commercial
-                                <i class="fa-solid fa-chevron-down"></i>
-                            </a>
-                            <ul class="html-js-sub-menu" class="ulis">
-                                <li class="lis"><a href="#">Angular</a></li>
-                                <li class="lis"><a href="#">Nextjs</a></li>
-                                <li class="lis"><a href="#">jQuery</a></li>
-                                <li class="lis"><a href="#">Express.js</a></li>
+                                <svg class="fill-current h-4 w-4 transform transition duration-150 ease-in-out ml-auto"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                    <path
+                                        d="M5.95 7.05a.5.5 0 01.7 0L10 10.3l3.35-3.25a.5.5 0 11.7.7l-4 4a.5.5 0 01-.7 0l-4-4a.5.5 0 010-.7z" />
+                                </svg>
+                            </button>
+                            <ul
+                                class="absolute hidden left-full top-0 ml-1 bg-white shadow-lg rounded w-56 nested-menu">
+                                <li><a href="#"
+                                        class="bg-gray-200 hover:bg-gray-300 py-2 px-4 block whitespace-no-wrap">P1</a>
+                                </li>
+                                <li><a href="#"
+                                        class="bg-gray-200 hover:bg-gray-300 py-2 px-4 block whitespace-no-wrap">P2</a>
+                                </li>
                             </ul>
                         </li>
                     </ul>
                 </li>
-
-
 
 
 
@@ -1158,6 +1124,56 @@
     </div>
 
     <script src="{% static 'script.js' %}"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const ourProjectsButton = document.getElementById('our-projects-button');
+            const ourProjectsMenu = document.getElementById('our-projects-menu');
+
+            ourProjectsButton.addEventListener('mouseenter', function () {
+                ourProjectsMenu.classList.remove('hidden');
+            });
+
+            ourProjectsButton.addEventListener('mouseleave', function () {
+                setTimeout(function () {
+                    if (!ourProjectsMenu.matches(':hover')) {
+                        ourProjectsMenu.classList.add('hidden');
+                    }
+                }, 300);
+            });
+
+            ourProjectsMenu.addEventListener('mouseleave', function () {
+                setTimeout(function () {
+                    ourProjectsMenu.classList.add('hidden');
+                }, 300);
+            });
+
+            document.querySelectorAll('.nested-button').forEach(function (nestedButton) {
+                nestedButton.addEventListener('mouseenter', function () {
+                    const nestedMenu = nestedButton.nextElementSibling;
+                    nestedMenu.classList.remove('hidden');
+                });
+
+                nestedButton.addEventListener('mouseleave', function () {
+                    const nestedMenu = nestedButton.nextElementSibling;
+                    setTimeout(function () {
+                        if (!nestedMenu.matches(':hover')) {
+                            nestedMenu.classList.add('hidden');
+                        }
+                    }, 300);
+                });
+            });
+
+            document.querySelectorAll('.nested-menu').forEach(function (nestedMenu) {
+                nestedMenu.addEventListener('mouseleave', function () {
+                    setTimeout(function () {
+                        nestedMenu.classList.add('hidden');
+                    }, 300);
+                });
+            });
+        });
+    </script>
+
 
 
 </body>

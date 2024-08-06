@@ -310,35 +310,420 @@
         </div>
     </nav>
 
-    <section class="bg-white mx-12">
-        <div class="container mx-auto px-6 py-10">
-            <h1 class="text-3xl font-semibold text-center text-gray-800">About Us</h1>
-            <p class="mt-4 text-gray-600 text-lg">
-                Welcome to <strong>Property Master</strong>, one of India's leading and most trusted real estate
-                companies. Established in 2010 by visionary entrepreneur Mr. Jitendra Singh, Property Master initially
-                focused on finance and investment before diversifying into the real estate sector in 2014. Our mission
-                is to uphold the highest standards of commitment, confidentiality, and competence, continually improving
-                our services through constant learning and development. We offer a comprehensive database of properties,
-                ensuring you find the perfect home or investment opportunity. Partner with us to experience excellence
-                in real estate.
-            </p>
-            <div class="mt-6">
-                <h2 class="text-xl font-semibold text-gray-800">Contact Us:</h2>
-                <ul class="mt-4 space-y-2">
-                    <li><strong>Address:</strong> 222 Singapoore Gold City 1Bypass Road oppo Vistara Township, near
-                        Infocity, Indore, Madhya Pradesh 452016
+    <!-- Main Section -->
+    <main class="container mx-auto mt-8 px-12">
+        <div class="bg-white shadow-md rounded-lg overflow-hidden">
+            <img src="{% static 'images/about_banner.jpg' %}" alt="About Us Banner" class="w-full">
+            <div class="p-6">
+                <h2 class="text-3xl font-semibold text-gray-800">About Us</h2>
+                <p class="mt-4 text-gray-600">Property Master Real Estate Consultancy Pvt Ltd. started its operations in
+                    the year of 2012, and now became a leading real estate company.
 
-                    </li>
-                    <li><strong>Phone Number:</strong> +91 8819888835</li>
-                </ul>
+
+                <p class="mt-4 text-gray-600">We are a Real Estate Investment consultants working across the city and
+                    help our clients by providing customized solutions as per their requirements. We have a perfect
+                    blend of professionals who are experts in their respective fields with combined experience of more
+                    than 10 years and work together to provide top-notch service to our clients within agreed timelines.
+                </p>
+                <p class="mt-4 text-gray-600">
+                    All our projects are duly approved and planned to meet the highest standard. Our remarkable track
+                    record in real estate show the trust of clients.
+                </p>
+                <div class="flex items-center mt-6">
+                    <div class="text-5xl font-bold text-blue-800 mr-4">2012</div>
+                    <div class="text-lg text-gray-600">when it all began</div>
+                </div>
+                <div class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="overflow-hidden rounded-lg">
+                        <img src="{% static 'images/office.jpeg' %}" alt="Office Image 1"
+                            class="w-full h-40 object-cover transition-transform duration-300 transform hover:scale-110">
+                    </div>
+                    <div class="overflow-hidden rounded-lg">
+                        <img src="{% static 'images/office1.jpeg' %}" alt="Office Image 2"
+                            class="w-full h-40 object-cover transition-transform duration-300 transform hover:scale-110">
+                    </div>
+                    <div class="overflow-hidden rounded-lg">
+                        <img src="{% static 'images/office2.jpeg' %}" alt="Office Image 3"
+                            class="w-full h-40 object-cover transition-transform duration-300 transform hover:scale-110">
+                    </div>
+                </div>
+
+                <h3 class="text-2xl font-semibold mt-4 text-gray-800">Our Success Story</h3>
+                <div class="mt-8 bg-orange-500 text-white p-6 rounded-lg">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+                        <div>
+                            <div class="text-4xl font-bold">10+</div>
+                            <div class="mt-2">years of experience</div>
+                        </div>
+                        <div>
+                            <div class="text-4xl font-bold">5+</div>
+                            <div class="mt-2">Projects</div>
+                        </div>
+                        <div>
+                            <div class="text-4xl font-bold">3500+</div>
+                            <div class="mt-2">Properties Sold</div>
+                        </div>
+                        <div>
+                            <div class="text-4xl font-bold">15+</div>
+                            <div class="mt-2">Team Members</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-8">
+                    <h3 class="text-2xl font-semibold text-gray-800">Videos</h3>
+                    <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="overflow-hidden rounded-lg">
+                            <iframe width="560" height="315"
+                                src="https://www.youtube.com/embed/YDAnBP3MSBY?si=ilJxMy9W2rBnE-2F"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <div class="overflow-hidden rounded-lg">
+                            <iframe width="560" height="315"
+                                src="https://www.youtube.com/embed/5s_nYy3as_Y?si=jb3CTdiwdo0G03Ty"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8">
+                    <h3 class="text-2xl font-semibold text-gray-800">Our core team members</h3>
+                    <div class="mt-4 grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="text-center">
+                            <div class="overflow-hidden rounded-full mx-auto w-40 h-40">
+                                <img src="{% static 'images/jitendra.webp' %}" alt="Member 1"
+                                    class="object-cover w-full h-full transition-transform duration-300 transform hover:scale-110">
+                            </div>
+                            <div class="mt-4 text-lg font-semibold text-gray-800">Jitendra Singh</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="overflow-hidden rounded-full mx-auto w-40 h-40">
+                                <img src="{% static 'images/abhimanyu.webp' %}" alt="Member 2"
+                                    class="object-cover w-full h-full transition-transform duration-300 transform hover:scale-110">
+                            </div>
+                            <div class="mt-4 text-lg font-semibold text-gray-800">Abhimanyu Singh</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="overflow-hidden rounded-full mx-auto w-40 h-40">
+                                <img src="{% static 'images/devendra.jpg' %}" alt="Member 3"
+                                    class="object-cover w-full h-full transition-transform duration-300 transform hover:scale-110">
+                            </div>
+                            <div class="mt-4 text-lg font-semibold text-gray-800">Devendra Grewal</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="overflow-hidden rounded-full mx-auto w-40 h-40">
+                                <img src="{% static 'images/yogita.jpg' %}" alt="Member 4"
+                                    class="object-cover w-full h-full transition-transform duration-300 transform hover:scale-110">
+                            </div>
+                            <div class="mt-4 text-lg font-semibold text-gray-800">Yogita Modi</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="overflow-hidden rounded-full mx-auto w-40 h-40">
+                                <img src="{% static 'images/mahesh.jpeg' %}" alt="Member 5"
+                                    class="object-cover w-full h-full transition-transform duration-300 transform hover:scale-110">
+                            </div>
+                            <div class="mt-4 text-lg font-semibold text-gray-800">Mahesh Mandloi</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="overflow-hidden rounded-full mx-auto w-40 h-40">
+                                <img src="{% static 'images/aditya.jpg' %}" alt="Member 5"
+                                    class="object-cover w-full h-full transition-transform duration-300 transform hover:scale-110">
+                            </div>
+                            <div class="mt-4 text-lg font-semibold text-gray-800">Aditya Singh Baghel</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8 px-4 py-12">
+                    <h3 class="text-3xl font-semibold text-gray-800 text-center">Our Digital Platform</h3>
+                    <div class="mt-8 flex flex-col lg:flex-row items-center justify-between">
+                        <div class="lg:w-1/2">
+                            <p class="text-lg leading-relaxed text-gray-700">
+                                Our CRM-based application is designed to streamline your workflow and enhance your
+                                business efficiency.
+                                With over 1,000 channel partners already on board, Property Master offers seamless
+                                property management,
+                                advanced tracking, and easy communication features. Elevate your real estate game
+                                today—download Property
+                                Master from the Google Play Store and join a thriving network of industry experts!
+                            </p>
+                            <div class="mt-8 flex items-center ml-48 justify-center lg:justify-start">
+                                <div>
+                                    <img src="{% static 'images/qr1.jpeg' %}" alt="QR Code" class="h-32">
+                                    <p class="text-center mt-2">Scan here to download</p>
+                                    <img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png"
+                                        alt="Google Play Store" class="h-12 mr-12 mt-2 mx-auto">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lg:w-1/2 mt-8 lg:mt-0">
+                            <img src="{% static 'images/app3.jpeg' %}" alt="App Screenshot" class="w-full h-auto">
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="mt-8">
-                <a href="https://propertymaster.co.in/" class="text-blue-500 hover:text-blue-600">Explore more about our
-                    projects and services on Property Master.</a>
+
+    </main>
+
+    <!-- New Section: Register to become Channel Partner -->
+    <section class="bg-white py-12 px-4 md:px-12">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+            <!-- Left Side Content -->
+            <div class="w-full md:w-1/2 px-4">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Join the Elite League of Channel Partners</h2>
+                <p class="text-lg text-gray-600 mb-8">
+                    As the real estate industry undergoes a transformative phase, we invite visionaries like you to
+                    become part of our exclusive network of channel partners. Unleash your potential, unlock lucrative
+                    prospects, and embark on a journey towards limitless success.
+                </p>
+            </div>
+            <!-- Right Side Form -->
+            <div class="w-full md:w-1/2 px-4">
+                <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Register to become Channel Partner</h3>
+                    <form>
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="first-name">
+                                First name <span class="text-red-500">*</span>
+                            </label>
+                            <input
+                                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                id="first-name" type="text" placeholder="First name">
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="last-name">
+                                Last name <span class="text-red-500">*</span>
+                            </label>
+                            <input
+                                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                id="last-name" type="text" placeholder="Last name">
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="phone-number">
+                                Phone number <span class="text-red-500">*</span>
+                            </label>
+                            <input
+                                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                id="phone-number" type="text" placeholder="Phone number">
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
+                                Email <span class="text-red-500">*</span>
+                            </label>
+                            <input
+                                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                id="email" type="email" placeholder="Email">
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="company-name">
+                                Your firm/company name
+                            </label>
+                            <input
+                                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                id="company-name" type="text" placeholder="Company name">
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <button
+                                class="bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                                type="button">
+                                Submit
+                            </button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- New Section: Advantages of Working Together -->
+    <section class="bg-orange-100 py-12 px-4 md:px-12">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold text-gray-800 mb-8">Advantages of Working Together</h2>
+            <div class="space-y-4">
+                <div>
+                    <button class="w-full text-left text-2xl font-semibold text-gray-800 mb-2 focus:outline-none"
+                        onclick="toggleContent('content1')">
+                        <span class="inline-block transform transition-transform duration-500" id="icon1">&#9660;</span>
+                        Risk Sharing
+                    </button>
+                    <div id="content1" class="hidden pl-4 border-l-2 border-orange-500">
+                        <p class="text-gray-600">The projects we take on are exclusively handled by a single team of
+                            associates. This avoids the usual confusion and misinformation regarding the project when
+                            handled by multiple brokers. We stay in the loop making sure to have all the inventory
+                            information and know-how of each and every project, right from the sale of units to its
+                            registry.</p>
+                    </div>
+                </div>
+                <div>
+                    <button class="w-full text-left text-2xl font-semibold text-gray-800 mb-2 focus:outline-none"
+                        onclick="toggleContent('content2')">
+                        <span class="inline-block transform transition-transform duration-500" id="icon2">&#9660;</span>
+                        Knowledge Sharing
+                    </button>
+                    <div id="content2" class="hidden pl-4 border-l-2 border-orange-500">
+                        <p class="text-gray-600">Sharing expertise and knowledge ensures that all team members are
+                            well-informed and capable of providing the best service possible to our clients.</p>
+                    </div>
+                </div>
+                <div>
+                    <button class="w-full text-left text-2xl font-semibold text-gray-800 mb-2 focus:outline-none"
+                        onclick="toggleContent('content3')">
+                        <span class="inline-block transform transition-transform duration-500" id="icon3">&#9660;</span>
+                        Exclusive Working on the Project
+                    </button>
+                    <div id="content3" class="hidden pl-4 border-l-2 border-orange-500">
+                        <p class="text-gray-600">Our projects are handled exclusively by our in-house team to ensure
+                            quality and consistency throughout the project lifecycle.</p>
+                    </div>
+                </div>
+                <div>
+                    <button class="w-full text-left text-2xl font-semibold text-gray-800 mb-2 focus:outline-none"
+                        onclick="toggleContent('content4')">
+                        <span class="inline-block transform transition-transform duration-500" id="icon4">&#9660;</span>
+                        Create Awareness About the Project
+                    </button>
+                    <div id="content4" class="hidden pl-4 border-l-2 border-orange-500">
+                        <p class="text-gray-600">We create awareness about our projects through various channels to
+                            ensure maximum reach and visibility.</p>
+                    </div>
+                </div>
+                <div>
+                    <button class="w-full text-left text-2xl font-semibold text-gray-800 mb-2 focus:outline-none"
+                        onclick="toggleContent('content5')">
+                        <span class="inline-block transform transition-transform duration-500" id="icon5">&#9660;</span>
+                        Sharing of Media Buying Expertise
+                    </button>
+                    <div id="content5" class="hidden pl-4 border-l-2 border-orange-500">
+                        <p class="text-gray-600">We share our expertise in media buying to help our partners achieve the
+                            best possible results for their marketing campaigns.</p>
+                    </div>
+                </div>
+                <div>
+                    <button class="w-full text-left text-2xl font-semibold text-gray-800 mb-2 focus:outline-none"
+                        onclick="toggleContent('content6')">
+                        <span class="inline-block transform transition-transform duration-500" id="icon6">&#9660;</span>
+                        Prompt Payments
+                    </button>
+                    <div id="content6" class="hidden pl-4 border-l-2 border-orange-500">
+                        <p class="text-gray-600">We ensure prompt payments to our partners to maintain a healthy and
+                            trustworthy relationship.</p>
+                    </div>
+                </div>
+                <div>
+                    <button class="w-full text-left text-2xl font-semibold text-gray-800 mb-2 focus:outline-none"
+                        onclick="toggleContent('content7')">
+                        <span class="inline-block transform transition-transform duration-500" id="icon7">&#9660;</span>
+                        Unparalleled Service to Customers
+                    </button>
+                    <div id="content7" class="hidden pl-4 border-l-2 border-orange-500">
+                        <p class="text-gray-600">Our commitment to providing unparalleled service to our customers is
+                            the cornerstone of our success.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function toggleContent(id) {
+            var content = document.getElementById(id);
+            var icon = document.getElementById('icon' + id.charAt(id.length - 1));
+            if (content.style.display === "none" || content.style.display === "") {
+                content.style.display = "block";
+                icon.style.transform = "rotate(180deg)";
+            } else {
+                content.style.display = "none";
+                icon.style.transform = "rotate(0deg)";
+            }
+        }
+    </script>
+
+
+
+
+
+
+    <footer class="bg-gray-800 text-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="xl:grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8">
+                <!-- Contact Info -->
+                <div class="mb-6 md:mb-0">
+                    <h3 class="font-bold mb-2">Contact Us</h3>
+                    <p>222 Singapoore Gold City 1Bypass Road oppo Vistara Township, near Infocity<br>Indore,
+                        Madhya
+                        Pradehs, 452016</p>
+                    <p class="my-2">Email: contact@propertymaster.co.in</p>
+                    <p>Phone: +91 8819888835</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="mb-6 md:mb-0">
+                    <h3 class="font-bold mb-2">Quick Links</h3>
+                    <ul>
+                        <li><a href="{% url 'about-us' %}" class="hover:text-orange-500">About Us</a></li>
+                        <li><a href="" class="hover:text-orange-500">Services</a></li>
+                        <li><a href="" class="hover:text-orange-500">FAQ</a></li>
+                        <li><a href="" class="hover:text-orange-500">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Social Media -->
+                <div class="mb-6 md:mb-0">
+                    <h3 class="font-bold mb-2">Follow Us</h3>
+                    <div class="flex mt-4">
+                        <a href="https://www.facebook.com/PropertyMasterIndore/" target="_blank" class="mr-2"><img
+                                src="{% static 'images/facebook.svg' %}" alt="Facebook"
+                                class="w-5 h-5 hover:opacity-80"></a>
+                        <a href="https://x.com/propertymaste19?lang=en" target="_blank" class="mr-2"><img
+                                src="{% static 'images/twitter.svg' %}" alt="Twitter"
+                                class="w-5 h-5 hover:opacity-80"></a>
+                        <a href="https://www.instagram.com/property_master_indore_/" target="_blank" class="mr-2"><img
+                                src="{% static 'images/instagram.svg' %}" alt="Instagram"
+                                class="w-5 h-5 hover:opacity-80"></a>
+                        <a href="https://www.linkedin.com/company/property-master-official/" target="_blank"
+                            class="mr-2"><img src="{% static 'images/linkedin.svg' %}" alt="LinkedIn"
+                                class="w-5 h-5 hover:opacity-80"></a>
+                    </div>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="mb-6 md:mb-0">
+                    <h3 class="font-bold mb-2">Newsletter</h3>
+                    <p>Sign up to receive updates and offers:</p>
+                    <form action="#" method="POST">
+                        <div class="mt-4 flex">
+                            <input type="email" class="rounded-l px-4 text-black py-2 w-full"
+                                placeholder="Enter your email">
+                            <button
+                                class="bg-orange-500 hover:bg-orange-700 text-white px-4 rounded-r">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- Copyright -->
+            <div class="text-center text-gray-500 mt-8">
+                <p>&copy; 2024 Property Master. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // TailwindCSS Configuration
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e3a8a',
+                        secondary: '#1e40af',
+                        accent: '#f59e0b',
+                    }
+                }
+            }
+        }
+    </script>
 </body>
 
 </html>
